@@ -17,6 +17,8 @@ export class UcTooltip {
   listenOutside(event: any) {
     // console.log(e.target);
     // console.log(this.divEl);
+
+    // https://www.javascripttutorial.net/dom/css/check-if-an-element-is-visible-in-the-viewport/
     if (!this.divEl.contains(event.target)) {
       this.isVisible = false;
       return;
@@ -24,6 +26,7 @@ export class UcTooltip {
     this.isVisible = !this.isVisible;
   }
 
+  // https://gilfink.medium.com/using-refs-in-stencil-3a709467f5c7
   render() {
     const { isVisible } = this;
     return (
